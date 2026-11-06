@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(){
+    float price, qty;
+    int senior;
+    scanf("%f %f %d", &price, &qty, &senior);
+    float gross = price * qty;
+    float discount = 0;
+    if(senior==1) discount = gross * 15 / 100;
+    float total = gross - discount;
+    total = total + total * 5 / 100;
+    if(total > 1000) total = total - 50;
+    printf("%.2f", total);
+    return 0;
+}
